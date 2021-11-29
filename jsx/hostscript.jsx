@@ -1,0 +1,1 @@
+if($.level) $.writeln("hostscript.jsx speaking.");
