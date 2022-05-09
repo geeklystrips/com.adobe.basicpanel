@@ -5,16 +5,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- <link id="hostStyle" rel="stylesheet" href="css/styles.css" /> -->
-
+  <link id="debugStyle" rel="stylesheet" href="css/styles.css" />
   <link id="fontsStyle" rel="stylesheet" href="font/stylesheet.css" />
   <link id="hostStyle" rel="stylesheet" href="css/topcoat-desktop-dark.css" />
-  <title>Basic Panel</title>
+  <title>Basic Adobe Bridge Panel</title>
 </head>
 
 <body>
 
-    <div class="topcoat-button-bar">
+<!-- Can't find a consistent way to actively change the theme from the panel yet, only updating content with eventlistener for now. -->
+    <!-- <div class="topcoat-button-bar">
+        <div class="topcoat-button-bar__item">
+          <button id="SelectDarkestTheme" class="topcoat-button-bar__button">DarkDark</button>
+        </div>
+        <div class="topcoat-button-bar__item">
+          <button id="SelectDarkTheme" class="topcoat-button-bar__button">Dark</button>
+        </div>
+        <div class="topcoat-button-bar__item">
+          <button id="SelectLightTheme" class="topcoat-button-bar__button">Light</button>
+        </div>
+        <div class="topcoat-button-bar__item">
+          <button id="SelectLighestTheme" class="topcoat-button-bar__button">LightLight</button>
+        </div>
+      </div> -->
+
+      <div class="topcoat-button-bar">
         <div class="topcoat-button-bar__item">
           <button class="topcoat-button-bar__button">One</button>
         </div>
@@ -24,30 +39,47 @@
         <div class="topcoat-button-bar__item">
           <button class="topcoat-button-bar__button">Three</button>
         </div>
+        <div class="topcoat-button-bar__item">
+          <button class="topcoat-button-bar__button">Four</button>
+        </div>
       </div>
 
+<!-- <input type="text" id= "ThemeStateInput" class="topcoat-text-input" placeholder="text" value="THEME CURRENT STATE" disabled> -->
 
-    <header>
+    <!-- <header>
         <h2>Search Input</h2>
       </header>
       <section class="component"><input type="search" value="" placeholder="search" class="topcoat-search-input">
-<input type="search" value="" placeholder="search" class="topcoat-search-input" disabled>
+<input type="search" value="" placeholder="search" class="topcoat-search-input" disabled> -->
+<!-- <br> -->
 <br>
-<br>
-Hi! Yes, hello, this is text. Haha.
+Hi! Yes, hello, this is text.
 <br><br>
 <!-- <button type="button" class="textbutton" onclick="sayHi()">Say hi</button>
 <br><br> -->
-<button class="topcoat-button" id="ReloadPanel" title="topcoat-button">Reload Panel</button>
-
-<br><br>
+<!-- <button class="topcoat-button" id="ReloadPanel" title="topcoat-button">Reload Panel</button> -->
+<!-- <button class="topcoat-button--cta" id="SwapLightDark" title="topcoat-button--cta" rel='tooltip'>Toggle Dark/Light CSS</button>
+<br> -->
 <button class="topcoat-button--cta" id="LoadJsxSample" title="topcoat-button--cta">Load JSX Sample</button>
 
 <br><br>
-<label class="topcoat-checkbox"> 
+<label class="topcoat-checkbox" id="checkbox1"> 
     <input type="checkbox">
-    <div class="topcoat-checkbox__checkmark"></div>
-    Hiiiii
+    <div class="topcoat-checkbox__checkmark"></div> 
+    I am a checkbox.
+</label>
+<br><br>
+
+<label class="topcoat-radiobutton" id="radio1">
+  <input type="radio">
+  <div class="topcoat-radio-button__checkmark"></div> 
+  I am a first radiobutton.
+</label>
+<br>
+<label class="topcoat-radiobutton" id="radio2">
+  <input type="radio">
+  <div class="topcoat-radio-button__checkmark"></div> 
+  I am a second radiobutton.
 </label>
 
 <br><br>
@@ -59,9 +91,30 @@ Hi! Yes, hello, this is text. Haha.
 <input type="text" class="topcoat-text-input" placeholder="text" value="ERROR" pattern="not-fail">
 
 
+<!-- These are debugging shortcuts.  Class debuglink items only appear in debug mode (when .debug file is present)  -->
+<span class="debuglink" id="reload">Reload</span>
+<span class="debuglink" id="sources">Sources</span>
+<span class="debuglink" id="debug">Debug</span>
+
+<!-- <a title="Default tooltip" rel='tooltip'>Test Tooltip</a> -->
+
+<!-- annoying bug with tooltips on macOS -->
+<!-- <script language="javascript">
+  jQuery(document).ready(function()
+  {
+    jQuery("[rel='tooltip']").tooltip({container: 'body'});
+  })
+</script> -->
+
+
 <script type="text/javascript" src="js/libs/CSInterface.js"></script>
 <script type="text/javascript" src="js/libs/jquery.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+
+
+
+
+
 </body>
 
 </html>

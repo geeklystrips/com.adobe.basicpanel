@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ExtensionManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ExtensionBundleId="com.adobe.basicpanel" ExtensionBundleVersion="1.0" Version="9.0">
+<ExtensionManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ExtensionBundleId="com.adobe.basicpanel" ExtensionBundleVersion="1.0.1" Version="9.0">
     <ExtensionList>
-        <Extension Id="com.adobe.basicpanel" Version="1.0"/>
+        <Extension Id="com.adobe.basicpanel" Version="1.0.1"/>
     </ExtensionList>
     <ExecutionEnvironment>
         <HostList>
@@ -19,7 +19,7 @@
         <RequiredRuntimeList>
         <!-- defaults write com.adobe.CSXS.10 PlayerDebugMode 1 -->
         <!-- defaults write com.adobe.CSXS.11 PlayerDebugMode 1 -->
-            <RequiredRuntime Name="CSXS" Version="10.0"/>
+            <RequiredRuntime Name="CSXS" Version="9.0"/>
         </RequiredRuntimeList>
     </ExecutionEnvironment>
     <DispatchInfoList>
@@ -28,7 +28,10 @@
                 <Resources>
                     <MainPath>./index.html</MainPath>
                     <ScriptPath>./jsx/hostscript.jsx</ScriptPath>
-                    <CEFCommandLine></CEFCommandLine>
+                    <CEFCommandLine>
+                        <!-- this is necessary starting with CSXS version 8.0 -->
+                        <Parameter>--enable-nodejs</Parameter>
+                    </CEFCommandLine>
                 </Resources>
                 <Lifecycle>
                     <AutoVisible>true</AutoVisible>

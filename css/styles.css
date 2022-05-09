@@ -3,6 +3,33 @@ body{
     color: white;
 }
 
-/* .background{
+/*  from https://github.com/adobe-photoshop/generator-panels */
 
+/* .tooltip-inner {
+    max-width: 650px; !important; 
 } */
+
+.debuglink {
+    font-size: 7pt;
+    text-decoration: underline;
+    color: #808080;
+    cursor: pointer;
+}
+
+#reload {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+#debug {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+#sources {
+    position: absolute;
+    right: 10px;
+    top: 31px;
+}

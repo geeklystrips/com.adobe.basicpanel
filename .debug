@@ -2,15 +2,24 @@
 <ExtensionList>
     <Extension Id="com.adobe.basicpanel">
         <HostList>
-            <!-- <Host Name="PHXS" Port="8000"/>
-            <Host Name="IDSN" Port="8001"/>
-            <Host Name="AICY" Port="8002"/>
-            <Host Name="ILST" Port="8003"/>
-            <Host Name="PPRO" Port="8004"/>
-            <Host Name="PRLD" Port="8005"/>
-            <Host Name="FLPR" Port="8006"/>
-            <Host Name="AUDT" Port="8007"/> -->
+        <!-- 
+            - the numbers can apparentl be whatever you want
+            - the important thing is that you don't have another extension using the same port
+            - main.js reads this specific file to scan for port number, using activateDebugLinks() 
+                DO NOT include a commented line here with a similar structure + attributes
+
+            "PHXS"  "8000"
+            "IDSN"  "8001"
+            "AICY"  "8002"
+            "ILST"  "8003"
+            "PPRO"  "8004"
+            "PRLD"  "8005"
+            "FLPR"  "8006"
+            "AUDT"  "8007" 
+            "KBRG"  "8008" 
+        -->
             <Host Name="KBRG" Port="8008"/>
+
         </HostList>
     </Extension>
 </ExtensionList>
