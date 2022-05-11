@@ -3,9 +3,9 @@
     <Extension Id="com.adobe.basicpanel">
         <HostList>
         <!-- 
-            - the numbers can apparentl be whatever you want
-            - the important thing is that you don't have another extension using the same port
-            - main.js reads this specific file to scan for port number, using activateDebugLinks() 
+            - the port numbers can apparently be whatever you want 
+            - the important thing is that you don't have another extension using the same port loaded at the same time
+            - IMPORTANT: main.js reads this specific file to scan for port number, using activateDebugLinks() 
                 DO NOT include a commented line here with a similar structure + attributes
 
             "PHXS"  "8000"

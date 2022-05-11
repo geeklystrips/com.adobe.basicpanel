@@ -29,7 +29,9 @@
                     <MainPath>./index.html</MainPath>
                     <ScriptPath>./jsx/hostscript.jsx</ScriptPath>
                     <CEFCommandLine>
-                        <!-- this is necessary starting with CSXS version 8.0 -->
+                        <!-- enable-nodejs is necessary starting with CSXS version 8.0
+                             From that point, all local paths referenced must be absolute 
+                             "~/file.csv" or "../file.csv" won't work, you need "/Users/username/file.csv") -->
                         <Parameter>--enable-nodejs</Parameter>
                     </CEFCommandLine>
                 </Resources>

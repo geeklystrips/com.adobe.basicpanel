@@ -1,8 +1,9 @@
 # com.adobe.basicpanel
 
 Basic Adobe Bridge 2022 Panel 
-- CSinterface 9.4
-- Topcoat 8 CSS
+- CEP 9, CSinterface v9.4 (CC2019+)
+- jQuery 1.7.1
+- CSS: Topcoat v0.8.0 (http://topcoat.io/)
 
 
 # License
